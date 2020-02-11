@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Junk-o-meter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+</head>
+<body>
+  
+  <main>
+    <section>
+      <div class="content content-welcome" id="welcome">
+        <h1>Junk-o-meter</h1>
+        <h2>How much of a junkie are you?</h2>
+        <p>Do you use drugs? Are you starting to get worried about your drug use? Take this short test to evaluate your drug use and/or addiction and see how you're doing.</p>
+        <p class="mb">
+          <small>(This test is just for fun and isn't based on any actual scientific research, or for that matter any research at all, other than over six years of personal experience with methamphetamine addiction and (ab)use of all sorts of recreational drugs.)</small>
+        </p>
+        <button type="button" class="btn" id="btn-start">Start the test</button>
+      </div>
+      <div class="content content-test" id="test-1">
+        <h2>Let's start with a simple question</h2>
+        <div class="question-group">
+          <h3>Do you use drugs?</h3>
+          <div class="row">
+            <button type="button" class="btn btn-equal" id="btn-1-yes">Yes</button>
+            <button type="button" class="btn btn-equal" id="btn-1-no">No</button>
+          </div>
+        </div>
+      </div>
+      <div class="content content-test" id="test-2">
+        <h2 id="question-counter">Cool</h2>
+        <div class="question-group">
+          <h3 id="test-2-question">How often do you use drugs?</h3>
+          <div class="row" id="answers">
+            <button type="button" class="btn btn-answer" data-jp="0" data-dp="0" id="btn-2-0">Daily</button>
+            <button type="button" class="btn btn-answer" data-jp="0" data-dp="0" id="btn-2-1">Few times a week</button>
+            <button type="button" class="btn btn-answer" data-jp="0" data-dp="0" id="btn-2-2">Few times a month</button>
+            <button type="button" class="btn btn-answer" data-jp="0" data-dp="0" id="btn-2-3">Less often</button>
+            <button type="button" class="btn btn-answer" data-jp="0" data-dp="0" id="btn-2-4">Placeholder</button>
+          </div>
+        </div>
+      </div>
+      <div class="content content-results" id="test-end">
+        <h2 id="result-title">Yolo</h2>
+        <p id="result-text">MacSwagger</p>
+        <div class="row" id="result-row">
+          <div id="result-box">
+            <div class="rb-row">
+              <div class="col img-col">
+                <img src="img/level0.png" class="rb-img" id="result-icon">
+              </div>
+              <div class="col text-col">
+                <p class="rb-txt" id="rb-text">I'm <span id="rb-not" class="hidden">NOT</span><span id="rb-a">a</span><span id=rb-perc>100%</span> junkie!</p>
+                <p class="rb-txt" id="rb-text-2">I scored <span id="rb-score">20</span> of <span id="rb-maxscore">113</span> Junkie Points!</p>
+              </div>
+            </div>
+            <h4 id="rb-title">Tested by <a href="http://junkie.matronator.com">Junk-o-meter</a></h4>
+            <p class="rb-link"><small class="rb-tiny"><a href="https://matronator.com">http://junkie.matronator.com</a> - Matronator &copy; 2019</small></p>
+          </div>
+          <div id="result-image" class="hidden"></div>
+        </div>
+        <div class="row" id="downloadDiv">
+          <a class="btn" id="downloadImg">&darr; Save image</a>
+        </div>
+        <div class="row">
+          <a href="http://junkie.matronator.com" class="btn" id="btn-restart">Take the test again</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/jquery-3.3.1.js"></script>
+  <script src="/js/html2canvas.min.js"></script>
+  <script src="/js/questions.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

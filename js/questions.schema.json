@@ -1,0 +1,113 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/js",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "Array of questions",
+  "default": null,
+  "uniqueItems": true,
+  "additionalItems": false,
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "The question object",
+    "default": null,
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "question",
+      "answers"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "integer",
+        "title": "The Id Schema",
+        "description": "Unique question identifier",
+        "default": 0,
+        "examples": [
+          0
+        ]
+      },
+      "question": {
+        "$id": "#/items/properties/question",
+        "type": "string",
+        "title": "The Question Schema",
+        "description": "The question text",
+        "default": "",
+        "examples": [
+          "Hello?"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "answers": {
+        "$id": "#/items/properties/answers",
+        "type": "array",
+        "title": "The Answers Schema",
+        "description": "Array of answers",
+        "default": null,
+        "uniqueItems": true,
+        "additionalItems": false,
+        "items": {
+          "$id": "#/items/properties/answers/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "description": "The answer object",
+          "default": null,
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "answer",
+            "junkiePoints",
+            "denialPoints"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#/items/properties/answers/items/properties/id",
+              "type": "integer",
+              "title": "The Id Schema",
+              "description": "Unique answer identifier",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            },
+            "answer": {
+              "$id": "#/items/properties/answers/items/properties/answer",
+              "type": "string",
+              "title": "The Answer Schema",
+              "description": "Text of the answer",
+              "default": "",
+              "examples": [
+                "Hi"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "junkiePoints": {
+              "$id": "#/items/properties/answers/items/properties/junkiePoints",
+              "type": "integer",
+              "title": "The Junkiepoints Schema",
+              "description": "How many JunkiePoints will be added if this answer is chosen.",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            },
+            "denialPoints": {
+              "$id": "#/items/properties/answers/items/properties/denialPoints",
+              "type": "integer",
+              "title": "The Denialpoints Schema",
+              "description": "How many DenialPoints will be added if this answer is chosen.",
+              "default": 0,
+              "examples": [
+                3
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
