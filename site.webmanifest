@@ -1,0 +1,19 @@
+{
+    "name": "Junk-o-meter",
+    "short_name": "Junk-o-meter",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=Ryxb7GvK5l",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=Ryxb7GvK5l",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#603cba",
+    "background_color": "#603cba",
+    "display": "standalone"
+}
